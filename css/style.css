@@ -10,6 +10,12 @@
   height: 4rem;
 }
 
+.main-nav {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+}
+
 .main-nav-list {
   list-style: none;
   display: flex;
@@ -26,22 +32,57 @@
   transition: all 0.3s;
 }
 
+.header-menu-shop-icon i {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+}
+
 .categories-container {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   gap: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .category-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
+  padding: 3rem;
   border-radius: 1rem;
+  background-color: #fff;
+  transition: transform 0.1s;
+}
+
+.category-item:hover {
+  box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.1);
+}
+
+.category-item-selected {
+  background-color: #ff000017;
 }
 
 .category-img {
   height: 2rem;
+  transition: transform 0.2s;
+}
+
+.category-item:hover .category-img {
+  animation-name: upDownSmall;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes upDownSmall {
+  0% {
+    transform: translateY(0rem);
+  }
+  100% {
+    transform: translateY(-0.5rem);
+  }
 }
 
 .category-title {
@@ -57,7 +98,7 @@
 
 .articles-title {
   text-align: center;
-  margin: 2rem 0;
+  margin: 3rem 0;
   font-size: 3.2rem;
 }
 
@@ -66,14 +107,72 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  padding: 1.5rem;
+  padding: 3rem;
+  border-radius: 1.5rem;
+  background-color: #fff;
+  transition: transform 0.1s;
+}
+
+.article-item:hover {
+  box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+
+.article-item-selected {
+  background-color: #ff000017;
 }
 
 .article-item-img {
   height: 13rem;
+  transition: transform 0.2s;
+}
+
+.article-item:hover .article-item-img {
+  animation-name: upDown;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(0rem);
+  }
+  100% {
+    transform: translateY(-1rem);
+  }
 }
 
 .article-name {
   font-family: var(--secondary-font);
   font-weight: 800;
+  font-size: 1.4rem;
+}
+
+.article-price {
+  font-size: 1.2rem;
+}
+
+.article-button-order {
+  background: linear-gradient(
+    90deg,
+    rgba(166, 0, 0, 1) 0%,
+    var(--primary-color) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(166, 0, 0, 1) 0%,
+    var(--primary-color) 100%
+  );
+  color: white;
+  font-weight: 600;
+  padding: 0.7rem 1.3rem;
+  border: none;
+  border-radius: 1rem;
+}
+
+.article-button-order:hover {
+  cursor: pointer;
+  opacity: 0.7;
 }
