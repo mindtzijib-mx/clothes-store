@@ -1,0 +1,51 @@
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 84em) {
+  .logo {
+    height: 4rem;
+  }
+}
+
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+}
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+
+  .articles-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 44em) {
+  .articles-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 34em) {
+  .articles-container {
+    grid-template-columns: 1fr;
+  }
+}

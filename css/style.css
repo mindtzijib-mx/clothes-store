@@ -2,12 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 6rem;
-  padding: 0 4.8rem;
+  padding: 1rem 4.8rem;
 }
 
 .logo {
-  height: 4rem;
+  height: 8rem;
 }
 
 .main-nav {
@@ -32,9 +31,13 @@
   transition: all 0.3s;
 }
 
-.header-menu-shop-icon i {
+.header-menu-shopping-cart {
   font-size: 2.2rem;
   color: var(--primary-color);
+}
+
+.header-menu-shopping-cart:hover {
+  cursor: pointer;
 }
 
 .categories-container {
@@ -94,6 +97,7 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 2rem;
+  padding: 3rem 0;
 }
 
 .articles-title {
@@ -160,11 +164,6 @@
     rgba(166, 0, 0, 1) 0%,
     var(--primary-color) 100%
   );
-  background: linear-gradient(
-    90deg,
-    rgba(166, 0, 0, 1) 0%,
-    var(--primary-color) 100%
-  );
   color: white;
   font-weight: 600;
   padding: 0.7rem 1.3rem;
@@ -173,6 +172,76 @@
 }
 
 .article-button-order:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.shopping-cart {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 30%;
+  height: 100%;
+  background-color: #fff;
+  padding: 40px 20px;
+  transition: right 0.3s ease-in-out;
+  z-index: 1001;
+  border-top-left-radius: 20%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.shopping-cart-header-container {
+  margin-bottom: 2rem;
+}
+
+.shopping-cart-header-container-title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.shopping-cart-item-img {
+  width: 5rem;
+}
+
+.shopping-cart-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.shopping-cart-item-image-container {
+  background-color: #ff000017;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.shopping-cart-item-name {
+  font-family: var(--secondary-font);
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.shopping-cart-item-price {
+  font-size: 1.2rem;
+}
+
+.shopping-cart-checkout-button {
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(166, 0, 0, 1) 0%,
+    var(--primary-color) 100%
+  );
+  color: white;
+  font-weight: 600;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 1rem;
+}
+
+.shopping-cart-checkout-button:hover {
   cursor: pointer;
   opacity: 0.7;
 }
