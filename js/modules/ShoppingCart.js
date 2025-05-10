@@ -13,17 +13,19 @@ class ShoppingCart {
   }
 
   events() {
-    this.shoppingCartIcon.addEventListener("click", (e) => {
+    this.addClickListener(this.shoppingCartIcon, this.toggleMenu.bind(this));
+    this.addClickListener(
+      this.shoppingCartIconBack,
+      this.toggleMenu.bind(this)
+    );
+    this.addClickListener(this.overlay, this.toggleMenu.bind(this));
+  }
+
+  // To avoid DRY
+  addClickListener(element, callback) {
+    element.addEventListener("click", (e) => {
       e.preventDefault();
-      this.toggleMenu();
-    });
-    this.shoppingCartIconBack.addEventListener("click", (e) => {
-      e.preventDefault();
-      this.toggleMenu();
-    });
-    this.overlay.addEventListener("click", (e) => {
-      e.preventDefault();
-      this.toggleMenu();
+      callback();
     });
   }
 

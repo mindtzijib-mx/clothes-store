@@ -9,6 +9,22 @@
   height: 8rem;
 }
 
+.upper-header {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  background-color: crimson;
+  color: white;
+}
+
+.upper-header > div {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
 .main-nav {
   display: flex;
   gap: 5rem;
@@ -44,6 +60,15 @@
 
 .header-menu-shopping-cart:hover {
   cursor: pointer;
+}
+
+.lower-header {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.lower-header-title {
+  font-size: 1.6rem;
 }
 
 .categories-container {
@@ -277,4 +302,47 @@
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(3px);
   z-index: 500;
+}
+.footer {
+  padding: 5rem 0;
+  margin-top: 5rem;
+  font-size: 1.3rem;
+  background-image: linear-gradient(to top, #bababa, #f5f5f5);
+  font-family: var(--secondary-font);
+}
+
+.footer-logo {
+  width: 7rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.footer-section-title {
+  font-size: 2rem;
+  font-family: var(--primary-font);
+}
+
+.footer-section-link {
+  text-decoration: none;
+  color: #555555;
+}
+
+.footer-section-link:hover {
+  color: var(--primary-color);
+}
+
+.footer-section-contact {
+  display: flex;
+  gap: 0.5rem;
 }
