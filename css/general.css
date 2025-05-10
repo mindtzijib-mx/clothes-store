@@ -71,3 +71,11 @@ body {
   line-height: 1.2;
   margin-bottom: 3.2rem;
 }
+
+.hidden {
+  display: none;
+}
+
+.block-scroll {
+  overflow: hidden;
+}
