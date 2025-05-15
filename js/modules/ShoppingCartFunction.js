@@ -6,7 +6,14 @@ class ShoppingCartFunction {
     this.shoppingCartMainContainer = document.querySelector(
       ".shopping-cart-main-container"
     );
-    this.shoppingCartTotal = 0;
+    this.totalPriceHTML = document.querySelector(
+      ".shopping-cart-total-price-quantity"
+    );
+    this.totalItemsCartHTML = document.querySelector(
+      ".header-menu-shopping-cart__number"
+    );
+    this.shoppingCartTotalPrice = 0;
+    this.totalItemsCart = 0;
     this.events();
     this.loadCartFromLocalStorage();
   }
@@ -39,14 +46,37 @@ class ShoppingCartFunction {
     // 4. Guardar el carrito actualizado en localStorage
     localStorage.setItem("shoppingCart", JSON.stringify(cart));
 
+    this.getTotalCartPrice(price, "sum");
+
     this.renderCartItem(product);
+
+    this.getTotalItemsCart(cart);
   }
 
   loadCartFromLocalStorage() {
     const cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
     cart.forEach((product) => {
       this.renderCartItem(product);
+      this.getTotalCartPrice(product.price, "sum");
     });
+
+    this.getTotalItemsCart(cart);
+  }
+
+  getTotalItemsCart(cart) {
+    this.totalItemsCartHTML.innerHTML = cart.length;
+    if (cart.length === 0) {
+      this.totalItemsCartHTML.style.visibility = "hidden";
+    } else {
+      this.totalItemsCartHTML.style.visibility = "visible";
+    }
+  }
+
+  getTotalCartPrice(price, operation) {
+    if (operation == "sum") this.shoppingCartTotalPrice += +price;
+    else if (operation == "subtract") this.shoppingCartTotalPrice -= +price;
+
+    this.totalPriceHTML.innerHTML = `S/${this.shoppingCartTotalPrice}`;
   }
 
   renderCartItem(product) {
@@ -54,15 +84,18 @@ class ShoppingCartFunction {
     const cartItem = document.createElement("article");
     cartItem.classList.add("shopping-cart-item");
     cartItem.innerHTML = `
-      <div class="shopping-cart-item-image-container" style="cursor:pointer;">
+      <div class="shopping-cart-item-image-container">
         <img
           src="${product.imgSrc}"
           alt=""
           class="shopping-cart-item-img"
         />
+        <div class="shopping-cart-item-image-overlay-delete">
+          <i class="fa-solid fa-trash"></i>
+        </div>
       </div>
       <h4 class="shopping-cart-item-name">${product.name}</h4>
-      <p class="shopping-cart-item-price">$${product.price}</p>
+      <p class="shopping-cart-item-price">S/${product.price}</p>
     `;
 
     // Agregar evento para eliminar
@@ -98,6 +131,9 @@ class ShoppingCartFunction {
       // 5. Eliminar del DOM
       cartItemElement.remove();
     }
+
+    this.getTotalItemsCart(cart);
+    this.getTotalCartPrice(product.price, "subtract");
   }
 }
 

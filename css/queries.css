@@ -74,10 +74,25 @@
   .main-nav {
     display: none;
   }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
 }
 
 @media (max-width: 34em) {
   .articles-container {
     grid-template-columns: 1fr;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .footer-section {
+    align-items: center;
+    text-align: center;
   }
 }

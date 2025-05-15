@@ -47,6 +47,10 @@
   transition: all 0.3s;
 }
 
+.header-menu-shop-icon {
+  position: relative;
+}
+
 .header-menu-shopping-cart {
   font-size: 2.2rem;
   background-image: linear-gradient(
@@ -60,6 +64,27 @@
 
 .header-menu-shopping-cart:hover {
   cursor: pointer;
+}
+
+.header-menu-shopping-cart__number {
+  font-size: 0.8rem;
+  height: 1.75rem;
+  width: 1.75rem;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  color: #fff;
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .lower-header {
@@ -89,6 +114,7 @@
   border-radius: 1rem;
   background-color: #fff;
   transition: transform 0.1s;
+  text-align: center;
 }
 
 .category-item:hover {
@@ -271,6 +297,44 @@
   background-color: #ff000017;
   padding: 0.5rem;
   border-radius: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.shopping-cart-item-image-overlay-delete {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  border-radius: 1rem;
+}
+
+.shopping-cart-item-image-overlay-delete {
+  opacity: 0;
+  background-color: hsla(0, 0%, 0%, 0.621);
+  transition: opacity 0.1s;
+}
+
+.shopping-cart-item-image-overlay-delete:hover {
+  opacity: 1;
+  background-color: hsla(0, 0%, 0%, 0.621);
+}
+
+.shopping-cart-item-image-overlay-delete i {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.1s;
+}
+
+.shopping-cart-item-image-overlay-delete:hover i {
+  color: white;
+  visibility: visible;
+  font-size: 2rem;
+  opacity: 1;
 }
 
 .shopping-cart-item-name {
@@ -311,7 +375,6 @@
 .shopping-cart-checkout-button:hover {
   cursor: pointer;
   opacity: 0.7;
-  font-size: 2.4rem;
 }
 
 .overlay {
