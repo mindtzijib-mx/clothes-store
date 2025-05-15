@@ -1,3 +1,5 @@
-import ShoppingCart from "./modules/ShoppingCart.js";
+import OpenShoppingCart from "./modules/OpenShoppingCart.js";
+import ShoppingCartFunction from "./modules/ShoppingCartFunction.js";
 
-const shoppingCart = new ShoppingCart();
+const shoppingCart = new OpenShoppingCart();
+const shoppingCartFunction = new ShoppingCartFunction();

@@ -1,4 +1,4 @@
-class ShoppingCart {
+class OpenShoppingCart {
   constructor() {
     this.shoppingCartIcon = document.querySelector(
       ".header-menu-shopping-cart"
@@ -35,4 +35,4 @@ class ShoppingCart {
   }
 }
 
-export default ShoppingCart;
+export default OpenShoppingCart;
