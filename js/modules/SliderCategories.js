@@ -22,20 +22,4 @@ export default function sliderCategories() {
     const walk = (x - startX) * 1.5;
     container.scrollLeft = scrollLeft - walk;
   });
-
-  // Para móviles
-  container.addEventListener("touchstart", (e) => {
-    isDown = true;
-    startX = e.touches[0].pageX - container.offsetLeft;
-    scrollLeft = container.scrollLeft;
-  });
-
-  container.addEventListener("touchend", () => (isDown = false));
-
-  container.addEventListener("touchmove", (e) => {
-    if (!isDown) return;
-    const x = e.touches[0].pageX - container.offsetLeft;
-    const walk = (x - startX) * 1.5;
-    container.scrollLeft = scrollLeft - walk;
-  });
 }

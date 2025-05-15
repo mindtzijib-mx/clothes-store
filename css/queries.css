@@ -94,6 +94,9 @@
     padding-left: 2rem;
     padding-right: 2rem;
   }
+  .categories-container {
+    overflow-x: auto;
+  }
 
   .footer-container {
     grid-template-columns: 1fr;
