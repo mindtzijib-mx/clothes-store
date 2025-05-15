@@ -82,8 +82,17 @@
 }
 
 @media (max-width: 34em) {
+  .upper-header {
+    flex-wrap: wrap;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
   .articles-container {
     grid-template-columns: 1fr;
+  }
+  .lower-header {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .footer-container {

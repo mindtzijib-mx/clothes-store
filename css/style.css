@@ -99,11 +99,14 @@
 }
 
 .categories-container {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  display: flex;
   gap: 2rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
+  overflow-x: hidden;
+  cursor: grab;
+  user-select: none;
+  scroll-behavior: smooth;
 }
 
 .category-item {
@@ -115,6 +118,7 @@
   background-color: #fff;
   transition: transform 0.1s;
   text-align: center;
+  min-width: 13rem;
 }
 
 .category-item:hover {
