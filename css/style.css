@@ -51,6 +51,10 @@
   position: relative;
 }
 
+.header-menu-mobile {
+  display: none;
+}
+
 .header-menu-shopping-cart {
   font-size: 2.2rem;
   background-image: linear-gradient(
