@@ -9,7 +9,7 @@ class ShoppingCartFunction {
     this.totalPriceHTML = document.querySelector(
       ".shopping-cart-total-price-quantity"
     );
-    this.totalItemsCartHTML = document.querySelector(
+    this.totalItemsCartHTML = document.querySelectorAll(
       ".header-menu-shopping-cart__number"
     );
     this.shoppingCartTotalPrice = 0;
@@ -64,12 +64,14 @@ class ShoppingCartFunction {
   }
 
   getTotalItemsCart(cart) {
-    this.totalItemsCartHTML.innerHTML = cart.length;
-    if (cart.length === 0) {
-      this.totalItemsCartHTML.style.visibility = "hidden";
-    } else {
-      this.totalItemsCartHTML.style.visibility = "visible";
-    }
+    this.totalItemsCartHTML.forEach((labelNumber) => {
+      labelNumber.innerHTML = cart.length;
+      if (cart.length === 0) {
+        labelNumber.style.visibility = "hidden";
+      } else {
+        labelNumber.style.visibility = "visible";
+      }
+    });
   }
 
   getTotalCartPrice(price, operation) {

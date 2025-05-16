@@ -1,6 +1,6 @@
 class OpenShoppingCart {
   constructor() {
-    this.shoppingCartIcon = document.querySelector(
+    this.shoppingCartIcon = document.querySelectorAll(
       ".header-menu-shopping-cart"
     );
     this.shoppingCartIconBack = document.querySelector(
@@ -13,7 +13,9 @@ class OpenShoppingCart {
   }
 
   events() {
-    this.addClickListener(this.shoppingCartIcon, this.toggleMenu.bind(this));
+    this.shoppingCartIcon.forEach((icon) => {
+      this.addClickListener(icon, this.toggleMenu.bind(this));
+    });
     this.addClickListener(
       this.shoppingCartIconBack,
       this.toggleMenu.bind(this)
