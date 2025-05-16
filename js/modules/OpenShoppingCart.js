@@ -20,7 +20,6 @@ class OpenShoppingCart {
       this.shoppingCartIconBack,
       this.toggleMenu.bind(this)
     );
-    this.addClickListener(this.overlay, this.toggleMenu.bind(this));
   }
 
   // To avoid DRY
@@ -33,7 +32,10 @@ class OpenShoppingCart {
 
   toggleMenu() {
     this.shoppingCart.classList.toggle("shopping-cart-open");
-    this.overlay.classList.toggle("hidden");
+  }
+
+  openCart() {
+    this.shoppingCart.classList.add("shopping-cart-open");
   }
 }
 

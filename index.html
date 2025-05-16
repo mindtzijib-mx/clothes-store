@@ -37,10 +37,6 @@
         <img class="logo" src="./img/jwgrafetiqueta-logo.png" alt="" />
       </div>
       <div class="header-menu-mobile">
-        <section class="header-menu-shop-icon header-menu-shop-icon-mobile">
-          <i class="header-menu-shopping-cart fa-solid fa-cart-shopping"></i>
-          <span class="header-menu-shopping-cart__number hidden">0</span>
-        </section>
         <div class="header-menu-mobile-hamburguer">
           <i class="fa-solid fa-bars"></i>
         </div>
@@ -55,10 +51,12 @@
             <li><a class="main-nav-link" href="#">Servicios</a></li>
           </ul>
         </section>
-        <section class="header-menu-shop-icon">
-          <i class="header-menu-shopping-cart fa-solid fa-cart-shopping"></i>
-          <span class="header-menu-shopping-cart__number hidden">0</span>
-        </section>
+        <div class="float-button-cart">
+          <section class="header-menu-shop-icon">
+            <i class="header-menu-shopping-cart fa-solid fa-cart-shopping"></i>
+            <span class="header-menu-shopping-cart__number hidden">0</span>
+          </section>
+        </div>
       </div>
     </header>
     <section class="lower-header">
@@ -171,7 +169,7 @@
               />
               <h4 class="article-name">Cinturón 1</h4>
               <p class="article-price">S/5.15</p>
-              <button class="article-button-order">Order</button>
+              <button class="article-button-order">Agregar al carrito</button>
             </article>
             <article class="article-item">
               <img
@@ -181,7 +179,7 @@
               />
               <h4 class="article-name">Cinturón 2</h4>
               <p class="article-price">S/8.00</p>
-              <button class="article-button-order">Order</button>
+              <button class="article-button-order">Agregar al carrito</button>
             </article>
             <article class="article-item">
               <img
@@ -191,7 +189,7 @@
               />
               <h4 class="article-name">Cinturón 3</h4>
               <p class="article-price">S/15.00</p>
-              <button class="article-button-order">Order</button>
+              <button class="article-button-order">Agregar al carrito</button>
             </article>
             <article class="article-item">
               <img
@@ -201,7 +199,7 @@
               />
               <h4 class="article-name">Cinturón 4</h4>
               <p class="article-price">S/4.00</p>
-              <button class="article-button-order">Order</button>
+              <button class="article-button-order">Agregar al carrito</button>
             </article>
             <article class="article-item">
               <img
@@ -211,7 +209,7 @@
               />
               <h4 class="article-name">Cinturón</h4>
               <p class="article-price">S/5.00</p>
-              <button class="article-button-order">Order</button>
+              <button class="article-button-order">Agregar al carrito</button>
             </article>
             <article class="article-item">
               <img
@@ -221,7 +219,7 @@
               />
               <h4 class="article-name">Cinturón</h4>
               <p class="article-price">S/5.00</p>
-              <button class="article-button-order">Order</button>
+              <button class="article-button-order">Agregar al carrito</button>
             </article>
             <article class="article-item">
               <img
@@ -231,7 +229,7 @@
               />
               <h4 class="article-name"></h4>
               <p class="article-price">S/5.00</p>
-              <button class="article-button-order">Order</button>
+              <button class="article-button-order">Agregar al carrito</button>
             </article>
           </section>
         </div>
@@ -254,7 +252,6 @@
         <button class="shopping-cart-checkout-button">Checkout</button>
       </div>
     </section>
-    <div class="overlay hidden"></div>
     <footer class="footer">
       <div class="footer-container container">
         <section class="footer-section">
@@ -267,7 +264,6 @@
         <section class="footer-section">
           <h3 class="footer-section-title">Enlaces de interés</h3>
           <a class="footer-section-link" href="#">Todos los productos</a>
-          <a class="footer-section-link" href="#">Tu cuenta</a>
           <a class="footer-section-link" href="#">Carrito de Compra</a>
         </section>
         <section class="footer-section">
