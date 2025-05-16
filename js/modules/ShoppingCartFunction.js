@@ -13,6 +13,9 @@ class ShoppingCartFunction {
     this.totalItemsCartHTML = document.querySelectorAll(
       ".header-menu-shopping-cart__number"
     );
+    this.checkoutbutton = document.querySelector(
+      ".shopping-cart-checkout-button"
+    );
     this.shoppingCartTotalPrice = 0;
     this.totalItemsCart = 0;
     this.events();
@@ -26,6 +29,9 @@ class ShoppingCartFunction {
         const article = button.closest(".article-item");
         this.addToShoppingCart(article);
       });
+    });
+    this.checkoutbutton.addEventListener("click", (e) => {
+      this.generateWhatsAppMessage();
     });
   }
 
@@ -171,6 +177,29 @@ class ShoppingCartFunction {
       this.getTotalItemsCart(cart);
       this.getTotalCartPrice();
     }
+  }
+
+  generateWhatsAppMessage() {
+    const cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
+    if (cart.length === 0) return;
+
+    let total = 0;
+    let message = "¡Hola! Quiero realizar el siguiente pedido:%0A%0A";
+    cart.forEach((product, idx) => {
+      const subtotal = parseFloat(product.price) * (product.quantity || 1);
+      total += subtotal;
+      message += `${idx + 1}. ${product.name} - S/${parseFloat(
+        product.price
+      ).toFixed(2)} x ${product.quantity || 1}%0A`;
+    });
+    message += `%0A`;
+    message += `Total: S/${total.toFixed(2)}%0A%0A`;
+    message += "¡Gracias!";
+
+    // Reemplaza el número por el tuyo o déjalo vacío para que el usuario elija
+    const phone = "525649517692"; // Ejemplo: "51999999999"
+    const url = `https://wa.me/${phone}?text=${message}`;
+    window.open(url, "_blank");
   }
 }
 
