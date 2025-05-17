@@ -197,7 +197,7 @@ class ShoppingCartFunction {
     message += "¡Gracias!";
 
     // Reemplaza el número por el tuyo o déjalo vacío para que el usuario elija
-    const phone = "525649517692"; // Ejemplo: "51999999999"
+    const phone = "51967999527"; // Ejemplo: "51999999999"
     const url = `https://wa.me/${phone}?text=${message}`;
     window.open(url, "_blank");
   }
