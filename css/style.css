@@ -116,6 +116,12 @@
   scroll-behavior: smooth;
 }
 
+.subcategories-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+}
+
 .category-item {
   display: flex;
   flex-direction: column;
@@ -126,6 +132,16 @@
   transition: transform 0.1s;
   text-align: center;
   min-width: 13rem;
+}
+
+.subcategory-item {
+  padding: 3rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  cursor: pointer;
 }
 
 .category-item:hover {
