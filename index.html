@@ -172,6 +172,9 @@
               />
               <h4 class="article-name">Cinturón 1</h4>
               <p class="article-price">S/5.15</p>
+              <p class="article-description" style="display: none">
+                Esta es la descripción del producto de cinturon 1.
+              </p>
               <button class="article-button-order">Agregar al carrito</button>
             </article>
             <article class="article-item">
@@ -182,6 +185,9 @@
               />
               <h4 class="article-name">Cinturón 2</h4>
               <p class="article-price">S/8.00</p>
+              <p class="article-description" style="display: none">
+                Esta es la descripción del producto de cinturon 2.
+              </p>
               <button class="article-button-order">Agregar al carrito</button>
             </article>
             <article class="article-item">
@@ -192,6 +198,9 @@
               />
               <h4 class="article-name">Cinturón 3</h4>
               <p class="article-price">S/15.00</p>
+              <p class="article-description" style="display: none">
+                Esta es la descripción del producto de cinturon 3.
+              </p>
               <button class="article-button-order">Agregar al carrito</button>
             </article>
             <article class="article-item">
@@ -202,6 +211,9 @@
               />
               <h4 class="article-name">Cinturón 4</h4>
               <p class="article-price">S/4.00</p>
+              <p class="article-description" style="display: none">
+                Esta es la descripción del producto de cinturon 4.
+              </p>
               <button class="article-button-order">Agregar al carrito</button>
             </article>
             <article class="article-item">
@@ -210,8 +222,11 @@
                 src="https://static.vecteezy.com/system/resources/thumbnails/041/453/635/small_2x/ai-generated-belt-aesthetics-on-transparent-background-png.png"
                 alt=""
               />
-              <h4 class="article-name">Cinturón</h4>
-              <p class="article-price">S/5.00</p>
+              <h4 class="article-name">Cinturón de cuero</h4>
+              <p class="article-price">S/4.00</p>
+              <p class="article-description" style="display: none">
+                Esta es la descripción del producto de cinturon de cuero.
+              </p>
               <button class="article-button-order">Agregar al carrito</button>
             </article>
             <article class="article-item">
@@ -220,8 +235,11 @@
                 src="https://static.vecteezy.com/system/resources/thumbnails/041/453/635/small_2x/ai-generated-belt-aesthetics-on-transparent-background-png.png"
                 alt=""
               />
-              <h4 class="article-name">Cinturón</h4>
-              <p class="article-price">S/5.00</p>
+              <h4 class="article-name">Cinturón 5</h4>
+              <p class="article-price">S/8.00</p>
+              <p class="article-description" style="display: none">
+                Esta es la descripción del producto de cinturon 5.
+              </p>
               <button class="article-button-order">Agregar al carrito</button>
             </article>
           </section>
@@ -242,7 +260,9 @@
         </p>
       </div>
       <div class="shopping-cart-checkout-container">
-        <button class="shopping-cart-checkout-button">Checkout</button>
+        <button class="shopping-cart-checkout-button">
+          Enviar pedido por WhatsApp
+        </button>
       </div>
     </section>
     <footer class="footer">
@@ -286,6 +306,21 @@
         </section>
       </div>
     </footer>
+    <div id="product-modal" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="modal-close" style="cursor: pointer">&times;</span>
+        <section class="modal-section-img">
+          <img id="modal-img" src="" alt="" style="max-width: 100%" />
+        </section>
+        <section class="modal-section-description">
+          <h2 id="modal-title"></h2>
+          <p id="modal-price"></p>
+          <p id="modal-description"></p>
+          <button class="modal-button-order">Agregar al carrito</button>
+        </section>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
     <script
       src="https://kit.fontawesome.com/8179d57828.js"
       crossorigin="anonymous"

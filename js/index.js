@@ -1,3 +1,4 @@
+import openModal from "./modules/OpenModal.js";
 import OpenShoppingCart from "./modules/OpenShoppingCart.js";
 import ShoppingCartFunction from "./modules/ShoppingCartFunction.js";
 import sliderCategories from "./modules/SliderCategories.js";
@@ -10,3 +11,4 @@ const shoppingCartFunction = new ShoppingCartFunction(
 
 sliderCategories();
 showSubcategories();
+openModal(shoppingCartFunction);
