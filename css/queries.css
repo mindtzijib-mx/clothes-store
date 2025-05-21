@@ -154,4 +154,9 @@
     align-items: center;
     text-align: center;
   }
+
+  .modal-content {
+    flex-direction: column;
+    text-align: center;
+  }
 }
