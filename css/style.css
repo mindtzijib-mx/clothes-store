@@ -201,6 +201,7 @@
   border-radius: 1.5rem;
   background-color: #fff;
   transition: transform 0.1s;
+  text-align: center;
 }
 
 .article-item:hover {
@@ -293,11 +294,11 @@
 
 .shopping-cart-header-container-title {
   text-align: center;
-  font-size: 4rem;
+  font-size: 3.2rem;
 }
 
 .shopping-cart-header-container-back {
-  font-size: 3rem;
+  font-size: 2.4rem;
   color: var(--primary-color);
 }
 
@@ -339,7 +340,7 @@
 .shopping-cart-item-name {
   font-family: var(--secondary-font);
   font-weight: 800;
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 
 .shopping-cart-item-quantity {
@@ -389,7 +390,7 @@
   padding: 1rem 3rem;
   border: none;
   border-radius: 1rem;
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 
 .shopping-cart-checkout-button:hover {
@@ -472,6 +473,7 @@
   position: relative;
   display: flex;
   gap: 1rem;
+  max-width: 80rem;
 }
 .modal-section-description {
   display: flex;

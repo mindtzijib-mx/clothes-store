@@ -1,6 +1,7 @@
 class ShoppingCartFunction {
   constructor(openCartCallback) {
     this.openCartCallback = openCartCallback;
+    this.articlesContainer = document.querySelector(".articles-container");
     this.articleButtonsOrder = document.querySelectorAll(
       ".article-button-order"
     );
@@ -32,6 +33,15 @@ class ShoppingCartFunction {
     });
     this.checkoutbutton.addEventListener("click", (e) => {
       this.generateWhatsAppMessage();
+    });
+
+    this.articlesContainer.addEventListener("click", (e) => {
+      const target = e.target;
+      const article = e.target.closest(".article-item");
+
+      if (target.classList.contains("article-button-order")) {
+        this.addToShoppingCart(article);
+      }
     });
   }
 

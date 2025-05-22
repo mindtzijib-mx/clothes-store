@@ -10,14 +10,6 @@ export default function openModal(shoppingCartFunctionInstance) {
   const closeBtn = document.querySelector(".modal-close");
   const addToCartBtn = document.querySelector(".modal-button-order");
 
-  // Esto en tu función que agrega el evento al botón
-  document.querySelectorAll(".article-button-order").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      e.stopPropagation(); // <-- Esto evita que el click llegue al padre
-      // ...tu lógica para agregar al carrito...
-    });
-  });
-
   // Cerrar modal
   closeBtn.addEventListener("click", () => {
     modal.style.display = "none";
@@ -27,27 +19,34 @@ export default function openModal(shoppingCartFunctionInstance) {
   });
 
   // Abrir modal con detalles
-  document.querySelectorAll(".article-item").forEach((item) => {
-    item.addEventListener("click", () => {
-      const img = item.querySelector(".article-item-img");
-      const name = item.querySelector(".article-name");
-      const price = item.querySelector(".article-price");
-      const desc = item.querySelector(".article-description");
 
-      modalImg.src = img ? img.src : "";
-      modalTitle.textContent = name ? name.textContent : "";
-      modalPrice.textContent = price ? price.textContent : "";
-      modalDescription.textContent = desc ? desc.textContent : "";
+  const articlesContainer = document.querySelector(".articles-container");
 
-      // Guardar referencia al producto actual en el modal
-      modal.dataset.img = img ? img.src : "";
-      modal.dataset.name = name ? name.textContent : "";
-      modal.dataset.price = price ? price.textContent : "";
-      modal.dataset.desc = desc ? desc.textContent : "";
+  if (articlesContainer) {
+    articlesContainer.addEventListener("click", (e) => {
+      const item = e.target.closest(".article-item");
+      // Evita abrir el modal si se hace click en el botón de agregar al carrito
+      if (item && !e.target.classList.contains("article-button-order")) {
+        const img = item.querySelector(".article-item-img");
+        const name = item.querySelector(".article-name");
+        const price = item.querySelector(".article-price");
+        const desc = item.querySelector(".article-description");
 
-      modal.style.display = "flex";
+        modalImg.src = img ? img.src : "";
+        modalTitle.textContent = name ? name.textContent : "";
+        modalPrice.textContent = price ? price.textContent : "";
+        modalDescription.textContent = desc ? desc.textContent : "";
+
+        // Guardar referencia al producto actual en el modal
+        modal.dataset.img = img ? img.src : "";
+        modal.dataset.name = name ? name.textContent : "";
+        modal.dataset.price = price ? price.textContent : "";
+        modal.dataset.desc = desc ? desc.textContent : "";
+
+        modal.style.display = "flex";
+      }
     });
-  });
+  }
 
   // Agregar al carrito desde el modal
   addToCartBtn.addEventListener("click", () => {
