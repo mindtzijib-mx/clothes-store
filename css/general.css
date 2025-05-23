@@ -72,10 +72,31 @@ body {
   margin-bottom: 3.2rem;
 }
 
+.heading-4 {
+  font-size: 2.4rem;
+  line-height: 1.2;
+  margin-bottom: 2.6rem;
+}
+
 .hidden {
   display: none;
 }
 
 .block-scroll {
   overflow: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.paragraph,
+.list-items {
+  font-size: 1.4rem;
+  font-family: var(--secondary-font);
+  margin: 2rem 0;
+}
+
+.link-active {
+  color: var(--primary-color) !important;
 }

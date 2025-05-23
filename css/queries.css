@@ -129,6 +129,10 @@
 }
 
 @media (max-width: 34em) {
+  .logo {
+    height: 8rem;
+  }
+
   .upper-header {
     flex-wrap: wrap;
     padding-left: 2rem;
@@ -158,5 +162,10 @@
   .modal-content {
     flex-direction: column;
     text-align: center;
+  }
+
+  .paragraph,
+  .list-items {
+    font-size: 1.8rem;
   }
 }

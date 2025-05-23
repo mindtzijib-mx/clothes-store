@@ -502,3 +502,28 @@
   background: none;
   line-height: 2rem;
 }
+
+.about-page-title {
+  margin: 3rem 0;
+}
+
+.about-container,
+.privacy-container {
+  max-width: 80rem;
+}
+
+.about-container section {
+  margin: 8rem 0;
+}
+
+.about-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  gap: 3rem;
+}
+
+.about-section__img {
+  width: 25rem;
+}
