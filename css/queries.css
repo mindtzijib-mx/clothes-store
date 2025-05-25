@@ -158,6 +158,24 @@
     display: inline-table;
     top: 4rem;
   }
+
+  .about-section {
+    grid-template-columns: 1fr;
+  }
+
+  .about-section__img {
+    order: 1;
+  }
+
+  .paragraph {
+    order: 2;
+    text-align: center;
+  }
+
+  .about-text {
+    order: 2;
+    text-align: center;
+  }
 }
 
 @media (max-width: 34em) {
