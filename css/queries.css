@@ -176,6 +176,19 @@
     order: 2;
     text-align: center;
   }
+
+  .main-nav-close {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    z-index: 1100;
+  }
 }
 
 @media (max-width: 34em) {
