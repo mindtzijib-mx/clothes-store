@@ -100,3 +100,46 @@ body {
 .link-active {
   color: var(--primary-color) !important;
 }
+
+.whatsapp-float-button {
+  position: fixed;
+  bottom: 20px; /* Distancia desde la parte inferior */
+  right: 20px; /* Distancia desde el lado derecho */
+  background-color: #25d366; /* Color de WhatsApp */
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float-button:hover {
+  transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-float-button i {
+  font-size: 3rem; /* Tamaño del ícono */
+}
+
+.footer-socials {
+  margin-top: 1rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-socials a {
+  color: #555; /* Cambia esto por el color que prefieras */
+  font-size: 1.8rem;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: var(--primary-color); /* Cambia esto por el color de hover */
+}
