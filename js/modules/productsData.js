@@ -3,7 +3,7 @@ export const products = [
   {
     name: "Etiqueta tejida básica",
     price: "1.50",
-    img: "https://static.vecteezy.com/system/resources/thumbnails/041/453/635/small_2x/ai-generated-belt-aesthetics-on-transparent-background-png.png",
+    img: "./img/productos/etiqueta-1.jfif",
     description: "Etiqueta tejida para ropa casual.",
     category: "Etiquetas",
     subcategory: "Tejidas",
